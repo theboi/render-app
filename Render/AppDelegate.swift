@@ -11,6 +11,8 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    let storyboard = NSStoryboard(name: "Main", bundle: nil)
+
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -21,6 +23,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to tear down your application
     }
 
-
+    func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
+        print("no")
+        
+        return true
+    }
 }
+
 
