@@ -15,6 +15,7 @@
 		AA3FCEBE244986310001B005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3FCEBD244986310001B005 /* Assets.xcassets */; };
 		AA3FCEC1244986310001B005 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3FCEBF244986310001B005 /* Main.storyboard */; };
 		AA6208D0244A966F00694243 /* RenderScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = AA6208CF244A966F00694243 /* RenderScene.scn */; };
+		AA7FE92D2457CAAD0092CC1C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FE92C2457CAAD0092CC1C /* main.swift */; };
 		AAE646632451D52E007D21B6 /* DrawShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE646622451D52E007D21B6 /* DrawShapeNode.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		AA3FCEC2244986310001B005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3FCEC3244986310001B005 /* Render.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Render.entitlements; sourceTree = "<group>"; };
 		AA6208CF244A966F00694243 /* RenderScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = RenderScene.scn; sourceTree = "<group>"; };
+		AA7FE92C2457CAAD0092CC1C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AAE646622451D52E007D21B6 /* DrawShapeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapeNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +84,6 @@
 			children = (
 				AA3FCEB92449862F0001B005 /* RenderVC.swift */,
 				AA31C36024499F5500B81973 /* NewProjectVC.swift */,
-				AAE646622451D52E007D21B6 /* DrawShapeNode.swift */,
 				AA27BB4D2454394E002AEB02 /* WindowController.swift */,
 			);
 			path = Controllers;
@@ -92,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				AA3FCEBF244986310001B005 /* Main.storyboard */,
+				AA7FE92C2457CAAD0092CC1C /* main.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,6 +101,7 @@
 		AA3FCECB244987990001B005 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AAE646622451D52E007D21B6 /* DrawShapeNode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				AA3FCEBA2449862F0001B005 /* RenderVC.swift in Sources */,
 				AA3FCEB82449862F0001B005 /* AppDelegate.swift in Sources */,
 				AA3FCEBC2449862F0001B005 /* Document.swift in Sources */,
+				AA7FE92D2457CAAD0092CC1C /* main.swift in Sources */,
 				AA31C36124499F5500B81973 /* NewProjectVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,8 +10,12 @@ import Cocoa
 
 class WindowController: NSWindowController {
     
+    @IBOutlet var recordButton: NSButton!
+    @IBOutlet var recordSymbol: NSButtonCell!
     override func windowDidLoad() {
         super.windowDidLoad()
+        recordSymbol.attributedTitle = NSAttributedString(string: "􀀁", attributes: [NSAttributedString.Key.foregroundColor : NSColor.red])
+        
         if (contentViewController?.className)! == "Render.RenderVC" {
             if let window = window, let screen = window.screen {
                 window.setFrameOrigin(NSPoint(x: 0, y: 0))

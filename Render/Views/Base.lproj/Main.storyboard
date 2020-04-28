@@ -673,7 +673,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="Document Window Controller" id="jGA-0Y-lOj" customClass="WindowController" customModule="Render" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Render" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Untitled Render Project" animationBehavior="default" tabbingMode="disallowed" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="Ckk-yw-fiv">
+                    <window key="window" title="Render" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="Untitled Render Project" animationBehavior="default" tabbingMode="disallowed" titlebarAppearsTransparent="YES" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
                         <rect key="contentRect" x="0.0" y="260" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
@@ -703,9 +703,21 @@
                                         </buttonCell>
                                     </button>
                                 </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="36483E2E-3B42-4C9A-8052-FF34FAE150BB" label="Record" paletteLabel="Record" sizingBehavior="auto" id="r4A-aO-R3f">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" id="hGf-Tr-OOY">
+                                        <rect key="frame" x="0.0" y="14" width="60" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" title="􀀁" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dV2-WU-iK9">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" size="13" name="SFCompactDisplay-Regular"/>
+                                        </buttonCell>
+                                    </button>
+                                </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
                                 <toolbarItem reference="Kp9-mj-0A0"/>
+                                <toolbarItem reference="r4A-aO-R3f"/>
                                 <toolbarItem reference="Tbh-wA-hKS"/>
                                 <toolbarItem reference="p7n-xG-3Oc"/>
                             </defaultToolbarItems>
@@ -715,6 +727,8 @@
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="recordButton" destination="hGf-Tr-OOY" id="tyV-gQ-AOk"/>
+                        <outlet property="recordSymbol" destination="dV2-WU-iK9" id="8l8-am-thI"/>
                         <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
                     </connections>
                 </windowController>
@@ -925,29 +939,29 @@ DQ
             <objects>
                 <viewController id="5gI-5U-AMq" customClass="RenderVC" customModule="Render" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="870" height="610"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iI5-z1-tLb">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="870" height="610"/>
                                 <subviews>
                                     <customView fixedFrame="YES" id="SLb-rp-Z5f">
-                                        <rect key="frame" x="0.0" y="0.0" width="79" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="610"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
                                     <customView id="gKK-ms-mjp">
-                                        <rect key="frame" x="80" y="0.0" width="296" height="300"/>
+                                        <rect key="frame" x="154" y="0.0" width="574" height="610"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="ajP-P3-1Y1">
-                                                <rect key="frame" x="0.0" y="0.0" width="296" height="300"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="574" height="610"/>
                                                 <subviews>
-                                                    <customView id="MqL-W5-Jkj" customClass="SCNView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="296" height="201"/>
+                                                    <customView misplaced="YES" id="MqL-W5-Jkj" customClass="SCNView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="574" height="346"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <subviews>
-                                                            <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C00-Yi-ytr">
-                                                                <rect key="frame" x="173" y="168" width="113" height="23"/>
+                                                            <segmentedControl verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C00-Yi-ytr">
+                                                                <rect key="frame" x="451" y="313" width="113" height="23"/>
                                                                 <segmentedCell key="cell" borderStyle="border" alignment="left" style="texturedSquare" trackingMode="momentary" id="eqv-eM-lzQ">
                                                                     <font key="font" metaFont="system"/>
                                                                     <segments>
@@ -966,9 +980,46 @@ DQ
                                                             <constraint firstAttribute="trailing" secondItem="C00-Yi-ytr" secondAttribute="trailing" constant="10" id="Z2V-MX-DOh"/>
                                                         </constraints>
                                                     </customView>
-                                                    <customView fixedFrame="YES" id="nUW-Ot-MAQ">
-                                                        <rect key="frame" x="0.0" y="202" width="296" height="98"/>
+                                                    <customView misplaced="YES" id="nUW-Ot-MAQ">
+                                                        <rect key="frame" x="0.0" y="347" width="574" height="263"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <subviews>
+                                                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5c1-Q4-sZx">
+                                                                <rect key="frame" x="0.0" y="0.0" width="574" height="300"/>
+                                                                <clipView key="contentView" id="Ib4-ey-gQL">
+                                                                    <rect key="frame" x="1" y="1" width="572" height="298"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <subviews>
+                                                                        <view id="eVU-kn-gAb">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="557" height="283"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                        </view>
+                                                                    </subviews>
+                                                                </clipView>
+                                                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="xGx-MS-L5O">
+                                                                    <rect key="frame" x="1" y="283" width="572" height="16"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </scroller>
+                                                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="682-xo-705">
+                                                                    <rect key="frame" x="557" y="1" width="16" height="298"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                </scroller>
+                                                            </scrollView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="HDW-gV-nqn"/>
+                                                            <constraint firstAttribute="bottom" secondItem="5c1-Q4-sZx" secondAttribute="bottom" id="U88-VF-r8D"/>
+                                                            <constraint firstItem="5c1-Q4-sZx" firstAttribute="leading" secondItem="nUW-Ot-MAQ" secondAttribute="leading" id="VeW-cy-wKK"/>
+                                                            <constraint firstItem="5c1-Q4-sZx" firstAttribute="top" secondItem="nUW-Ot-MAQ" secondAttribute="top" id="aeb-EX-C9N"/>
+                                                            <constraint firstAttribute="trailing" secondItem="5c1-Q4-sZx" secondAttribute="trailing" id="yPs-ci-ANi"/>
+                                                        </constraints>
+                                                        <gestureRecognizers>
+                                                            <magnificationGestureRecognizer delaysMagnificationEvents="YES" magnification="0.0" id="xe3-5F-Wab">
+                                                                <connections>
+                                                                    <action selector="onTimelineZoom:" target="5gI-5U-AMq" id="gDE-nm-Odo"/>
+                                                                </connections>
+                                                            </magnificationGestureRecognizer>
+                                                        </gestureRecognizers>
                                                     </customView>
                                                 </subviews>
                                                 <holdingPriorities>
@@ -985,7 +1036,7 @@ DQ
                                         </constraints>
                                     </customView>
                                     <customView fixedFrame="YES" id="KD0-xG-YXx">
-                                        <rect key="frame" x="377" y="0.0" width="73" height="300"/>
+                                        <rect key="frame" x="729" y="0.0" width="141" height="610"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
                                 </subviews>
@@ -1005,12 +1056,13 @@ DQ
                     </view>
                     <connections>
                         <outlet property="renderView" destination="MqL-W5-Jkj" id="mi0-6A-ZQW"/>
+                        <outlet property="timelineView" destination="5c1-Q4-sZx" id="iuC-FA-Pt8"/>
                         <outlet property="zoomFuncs" destination="C00-Yi-ytr" id="AkJ-Pf-TUF"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="27" y="836"/>
+            <point key="canvasLocation" x="-121" y="991"/>
         </scene>
     </scenes>
 </document>

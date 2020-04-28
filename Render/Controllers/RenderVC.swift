@@ -8,17 +8,26 @@
 
 import Cocoa
 import SceneKit
+import SpriteKit
 
 class RenderVC: NSViewController {
     
     
+    @IBOutlet var timelineView: NSScrollView!
     @IBOutlet var zoomFuncs: NSSegmentedControl!
     @IBOutlet var renderView: SCNView!
     
+    var timelineZoom = 1.0
     let scene = SCNScene()
     var optimalPOV = CGFloat(exactly: 2000)
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        timelineView.rulersVisible = true
+        timelineView.hasHorizontalRuler = true
+        timelineView.hasHorizontalScroller = true
+        timelineView.documentView = NSView(frame: NSRect(x: 0, y: 0, width: 2000, height: 1))
+        timelineView.magnification = CGFloat(timelineZoom)
         
         renderView.backgroundColor = NSColor(calibratedRed: 0.1, green: 0.1, blue: 0.1, alpha: 1)
         renderView.isPlaying = true
@@ -35,12 +44,30 @@ class RenderVC: NSViewController {
 
         main.geometry?.firstMaterial?.diffuse.contents = NSColor.black
         
-        let text = SCNText(string: "string", extrusionDepth: 1)
-        text.firstMaterial?.diffuse.contents = NSColor.white
-        text.font = NSFont(name: "Roboto", size: 120)
+//        let text = SCNText(string: "THIS IS LIVING NOW", extrusionDepth: 10)
+//        text.firstMaterial?.diffuse.contents = NSColor.white
+//        text.font = NSFont(name: "Bytheway", size: 120)
+        
+        let text = SCNPlane(width: 1000, height: 1000)
+        let circle = SKShapeNode(circleOfRadius: 10)
+        circle.fillColor = .red
+        text.firstMaterial?.diffuse.contents = circle
         main.addChildNode(SCNNode(geometry: text))
+        
+//        main.addChildNode(DrawShapeNode(shape: .square, color: .red))
     }
 
+    @IBAction func onTimelineZoom(_ sender: NSMagnificationGestureRecognizer) {
+        print("A")
+        if sender.state == .began || sender.state == .changed {
+            if sender.magnification > 0 {
+                timelineView.magnification += 0.1
+            } else {
+                timelineView.magnification -= 0.1
+            }
+        }
+    }
+    
     override func viewDidAppear() {
 //        performSegue(withIdentifier: "NewProject", sender: self)
         
