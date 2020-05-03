@@ -10,9 +10,9 @@ import Cocoa
 
 class WindowController: NSWindowController {
     
-    @IBOutlet var recordButton: NSButton!
     @IBOutlet var recordSymbol: NSButtonCell!
     override func windowDidLoad() {
+        print("Hello")
         super.windowDidLoad()
         recordSymbol.attributedTitle = NSAttributedString(string: "􀀁", attributes: [NSAttributedString.Key.foregroundColor : NSColor.red])
         
@@ -22,6 +22,10 @@ class WindowController: NSWindowController {
                 window.setContentSize(NSSize(width: screen.frame.width, height: screen.frame.height))
             }
         }
+    }
+    
+    override init(window: NSWindow?) {
+        super.init(window: window)
     }
     
     required init?(coder: NSCoder) {

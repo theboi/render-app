@@ -12,9 +12,9 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
     
     private var window: NSWindow?
-    
-    let storyboard = NSStoryboard(name: "Main", bundle: nil)
-    
+    private var windowController: NSWindowController?
+    private var appMenu: NSMenu?
+        
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Create Window
         let windowSize = NSSize(width: 480, height: 480)
@@ -27,7 +27,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                           styleMask: [.miniaturizable, .closable, .resizable, .titled],
                           backing: .buffered,
                           defer: false)
+
+        // Load Content View Controller for Window
+//        window?.windowController = WindowController()
+        window?.contentViewController = RenderViewController()
+        window?.menu = AppMenu()
         window?.makeKeyAndOrderFront(nil)
+//        windowController?.showWindow(nil)
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -35,8 +41,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
-        print("no")
-        
         return true
     }
 }

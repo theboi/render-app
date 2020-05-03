@@ -727,7 +727,6 @@
                         </connections>
                     </window>
                     <connections>
-                        <outlet property="recordButton" destination="hGf-Tr-OOY" id="tyV-gQ-AOk"/>
                         <outlet property="recordSymbol" destination="dV2-WU-iK9" id="8l8-am-thI"/>
                         <segue destination="5gI-5U-AMq" kind="relationship" relationship="window.shadowedContentViewController" id="nsd-lR-9xd"/>
                     </connections>
@@ -934,10 +933,10 @@ DQ
             </objects>
             <point key="canvasLocation" x="675.5" y="870.5"/>
         </scene>
-        <!--RenderVC-->
+        <!--Render View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="5gI-5U-AMq" customClass="RenderVC" customModule="Render" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5gI-5U-AMq" customClass="RenderViewController" customModule="Render" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ERx-hH-rdd">
                         <rect key="frame" x="0.0" y="0.0" width="870" height="610"/>
                         <autoresizingMask key="autoresizingMask"/>
