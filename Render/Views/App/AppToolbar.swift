@@ -9,9 +9,9 @@
 import Cocoa
 
 class AppToolbar: NSToolbar {
-    override init() {
-        super.init(identifier: "")
-    }
+//    override init() {
+//        super.init(identifier: "")
+//    }
 
 }
 
