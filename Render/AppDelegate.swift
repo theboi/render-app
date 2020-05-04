@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var window: NSWindow?
     private var windowController: NSWindowController?
     private var appMenu: NSMenu?
+    private var appToolbar = NSToolbar()
         
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Create Window
@@ -30,9 +31,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         // Load Content View Controller for Window
 //        window?.windowController = WindowController()
+        window?.titleVisibility = .hidden
+        window?.titlebarAppearsTransparent = true
         window?.contentViewController = RenderViewController()
         window?.menu = AppMenu()
         window?.makeKeyAndOrderFront(nil)
+        window?.toolbar = appToolbar
 //        windowController?.showWindow(nil)
     }
     
