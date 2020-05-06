@@ -9,13 +9,21 @@
 import Cocoa
 
 //@NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSApplication, NSApplicationDelegate {
     
     private var window: NSWindow?
     private var windowController: NSWindowController?
-    private var appMenu: NSMenu?
-    private var appToolbar = NSToolbar()
-        
+    
+    override init() {
+        super.init()
+        delegate = self
+        mainMenu = AppMenu()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Create Window
         let windowSize = NSSize(width: 480, height: 480)
@@ -34,9 +42,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window?.titleVisibility = .hidden
         window?.titlebarAppearsTransparent = true
         window?.contentViewController = RenderViewController()
-        window?.menu = AppMenu()
+        window?.toolbar = AppToolbar()
         window?.makeKeyAndOrderFront(nil)
-        window?.toolbar = appToolbar
 //        windowController?.showWindow(nil)
     }
     

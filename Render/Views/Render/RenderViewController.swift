@@ -11,13 +11,13 @@ import SnapKit
 
 class RenderViewController: NSViewController {
     
-    private var rootSplitView = NSSplitView(frame: NSRect())
-    private var rootSplitViewLeft = NSView(frame: NSRect())
-    private var rootSplitViewCenter = NSSplitView(frame: NSRect())
-    private var rootSplitViewRight = NSView(frame: NSRect())
+    private lazy var rootSplitView = NSSplitView(frame: NSRect())
+    private lazy var rootSplitViewLeft = NSView(frame: NSRect())
+    private lazy var rootSplitViewCenter = NSSplitView(frame: NSRect())
+    private lazy var rootSplitViewRight = NSView(frame: NSRect())
     
-    private var centerSplitViewTop = SceneView()
-    private var centerSplitViewBottom = TimelineView()
+    private lazy var centerSplitViewTop = SceneView()
+    private lazy var centerSplitViewBottom = TimelineView(frame: NSRect())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class RenderViewController: NSViewController {
         rootSplitView.dividerStyle = .thin
         rootSplitView.subviews = [rootSplitViewLeft, rootSplitViewCenter, rootSplitViewRight]
         
-        centerSplitViewBottom.snp.makeConstraints { (make) in make.height.lessThanOrEqualTo(300)}
+        centerSplitViewBottom.snp.makeConstraints { (make) in make.height.lessThanOrEqualTo(500)}
         rootSplitViewCenter.dividerStyle = .thin
         rootSplitViewCenter.subviews = [centerSplitViewTop, centerSplitViewBottom]
     }
@@ -38,7 +38,7 @@ class RenderViewController: NSViewController {
     override func viewDidAppear() {
         rootSplitView.setPosition(250, ofDividerAt: 0)
         rootSplitView.setPosition(K.screenWidth - 250, ofDividerAt: 1)
-        rootSplitViewCenter.setPosition(K.screenHeight - 250, ofDividerAt: 0)
+        rootSplitViewCenter.setPosition(K.screenHeight - 350, ofDividerAt: 0)
     }
     
     override func loadView() {

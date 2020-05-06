@@ -18,6 +18,7 @@
 		AA65AB89245D979300A1D5AC /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65AB88245D979300A1D5AC /* RenderViewController.swift */; };
 		AA6E5A21245D3B68005E358D /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E5A20245D3B68005E358D /* AppMenu.swift */; };
 		AA7FE92D2457CAAD0092CC1C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FE92C2457CAAD0092CC1C /* main.swift */; };
+		AAA6AC6524626F2B009AB802 /* Alive Again.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */; };
 		AACEA3C3245E6ADB002080FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3C2245E6ADB002080FA /* Constants.swift */; };
 		AACEA3C5245EB53C002080FA /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3C4245EB53C002080FA /* TimelineView.swift */; };
 		AACEA3C9245FACE2002080FA /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3C8245FACE2002080FA /* SceneView.swift */; };
@@ -43,6 +44,7 @@
 		AA65AB88245D979300A1D5AC /* RenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
 		AA6E5A20245D3B68005E358D /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
 		AA7FE92C2457CAAD0092CC1C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Alive Again.mp3"; sourceTree = "<group>"; };
 		AACEA3C2245E6ADB002080FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AACEA3C4245EB53C002080FA /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		AACEA3C8245FACE2002080FA /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				AA3FCEC3244986310001B005 /* Render.entitlements */,
 				AA6208CF244A966F00694243 /* RenderScene.scn */,
 				AACEA3C2245E6ADB002080FA /* Constants.swift */,
+				AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */,
 			);
 			path = Render;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				AA3FCEBE244986310001B005 /* Assets.xcassets in Resources */,
 				AA3FCEC1244986310001B005 /* Unused.storyboard in Resources */,
+				AAA6AC6524626F2B009AB802 /* Alive Again.mp3 in Resources */,
 				AA6208D0244A966F00694243 /* RenderScene.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

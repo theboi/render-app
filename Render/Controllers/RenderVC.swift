@@ -58,7 +58,6 @@ class RenderVC: NSViewController {
     }
 
     @IBAction func onTimelineZoom(_ sender: NSMagnificationGestureRecognizer) {
-        print("A")
         if sender.state == .began || sender.state == .changed {
             if sender.magnification > 0 {
                 timelineView.magnification += 0.1

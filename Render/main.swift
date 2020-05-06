@@ -8,6 +8,15 @@
 
 import Foundation
 import Cocoa
-let delegate = AppDelegate()
-NSApplication.shared.delegate = delegate
-_ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
+
+// old code -- to switch back, change subclass of AppDelegate from NSApplication to NSObject and remove inits
+//let delegate = AppDelegate()
+//NSApplication.shared.delegate = delegate
+//NSApplication.shared.mainMenu = AppMenu(title: "MainMenu")
+//_ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
+
+autoreleasepool {
+    let App = AppDelegate.shared
+    App.setActivationPolicy(.regular)
+    App.run()
+}
