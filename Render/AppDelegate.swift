@@ -21,7 +21,12 @@ class AppDelegate: NSApplication, NSApplicationDelegate {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+    }
+    
+    override func orderFrontStandardAboutPanel(options optionsDictionary: [NSApplication.AboutPanelOptionKey : Any] = [:]) {
+        super.orderFrontStandardAboutPanel(options: [.applicationIcon : NSImage(named: "AppIcon")!,
+                                                     .applicationVersion: "0.1"])
     }
     
     func applicationDidFinishLaunching(_ notification: Notification) {

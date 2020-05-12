@@ -18,5 +18,6 @@ import Cocoa
 autoreleasepool {
     let App = AppDelegate.shared
     App.setActivationPolicy(.regular)
+    App.applicationIconImage = NSImage(named: "AppIcon")
     App.run()
 }
