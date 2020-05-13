@@ -46,7 +46,7 @@ class AppDelegate: NSApplication, NSApplicationDelegate {
 //        window?.windowController = WindowController()
         window?.titleVisibility = .hidden
         window?.titlebarAppearsTransparent = true
-        window?.contentViewController = RenderViewController()
+        window?.contentViewController = EditorViewController()
         window?.toolbar = AppToolbar()
         window?.makeKeyAndOrderFront(nil)
 //        windowController?.showWindow(nil)

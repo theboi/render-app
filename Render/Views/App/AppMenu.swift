@@ -22,9 +22,9 @@ class AppMenu: NSMenu {
             NSMenuItem(title: "Preferences...", action: #selector(NSApplication.terminate(_:)), keyEquivalent: ","),
             NSMenuItem.separator(),
             NSMenuItem(title: "Hide \(applicationName)", action: #selector(NSApplication.hide(_:)), keyEquivalent: "h"),
-            NSMenuItemWithModifier(title: "Hide Others", action: #selector(NSApplication.hideOtherApplications(_:)), keyEquivalent: "h", modifier: .init(arrayLiteral: [.command, .option])),
+            NSMenuItem(title: "Hide Others", target: self, action: #selector(NSApplication.hideOtherApplications(_:)), keyEquivalent: "h", modifier: .init(arrayLiteral: [.command, .option])),
             NSMenuItem.separator(),
-            NSMenuItem(title: "Quit \(applicationName)", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q")
+            NSMenuItem(title: "Quit \(applicationName)", action: #selector(NSApplication.shared.terminate(_:)), keyEquivalent: "q")
         ]
         
         let fileTab = NSMenuItem()
@@ -48,7 +48,7 @@ class AppMenu: NSMenu {
             NSMenuItem(title: "Copy", action: #selector(NSApplication.copy), keyEquivalent: "c"),
             NSMenuItem(title: "Paste", action: #selector(NSApplication.copy), keyEquivalent: "v"),
             NSMenuItem.separator(),
-            NSMenuItemWithModifier(title: "Delete", action: #selector(NSApplication.copy), keyEquivalent: "⌫", modifier: .init()),
+            NSMenuItem(title: "Delete", target: self, action: #selector(NSApplication.copy), keyEquivalent: "⌫", modifier: .init()),
             NSMenuItem(title: "Duplicate", action: #selector(NSApplication.copy), keyEquivalent: "d"),
         ]
         
@@ -58,25 +58,25 @@ class AppMenu: NSMenu {
         helpTab.submenu = NSMenu(title: "Help")
         helpTab.submenu?.items = [
             helpTabSearch,
-            NSMenuItem(title: "Documentation", action: #selector(method(for:)), keyEquivalent: ""),
+            NSMenuItem(title: "Documentation", target: self, action: #selector(openDoc(_:)), keyEquivalent: ""),
             NSMenuItem(title: "Feedback", action: #selector(method(for:)), keyEquivalent: ""),
         ]
-        
         items = [mainTab, fileTab, editTab, helpTab]
-    }
-    
-    required init(coder decoder: NSCoder) {
-        super.init(coder: decoder)
-    }
-}
-
-class NSMenuItemWithModifier: NSMenuItem {
-    init(title string: String, action selector: Selector?, keyEquivalent charCode: String, modifier: NSEvent.ModifierFlags) {
-        super.init(title: string, action: selector, keyEquivalent: charCode)
-        keyEquivalentModifierMask = modifier
     }
     
     required init(coder: NSCoder) {
         super.init(coder: coder)
+    }
+    
+    @objc func openDoc(_: Any) {
+        NSWorkspace.shared.open(URL(string: "https://theboi.github.io/render-app/")!)
+    }
+}
+
+extension NSMenuItem {
+    convenience init(title string: String, target: AnyObject = self as AnyObject, action selector: Selector?, keyEquivalent charCode: String, modifier: NSEvent.ModifierFlags = .command) {
+        self.init(title: string, action: selector, keyEquivalent: charCode)
+        keyEquivalentModifierMask = modifier
+        self.target = target
     }
 }

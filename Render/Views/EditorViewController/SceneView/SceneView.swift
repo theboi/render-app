@@ -12,7 +12,6 @@ import SceneKit
 import SpriteKit
 
 class SceneView: NSView {
-    
     private lazy var sceneView = SCNView(frame: NSRect())
     private lazy var scene = SCNScene()
     private lazy var optimalPOV = CGFloat(exactly: 2000)
@@ -20,30 +19,30 @@ class SceneView: NSView {
     
     override init(frame: NSRect) {
         super.init(frame: frame)
+
         super.addSubview(sceneView)
         
         resizer.segmentStyle = .texturedSquare
         sceneView.addSubview(resizer)
         resizer.snp.makeConstraints { (make) in
             make.width.equalTo(130)
-            make.bottom.equalTo(self).offset(-10)
-            make.right.equalTo(self).offset(-10)
+            make.right.bottom.equalTo(self).offset(-10)
         }
         sceneView.snp.makeConstraints { (make) in
             make.edges.equalTo(self).inset(ConstraintInsets(top: 0, left: 0, bottom: 0, right: 0))
         }
         
-        sceneView.backgroundColor = NSColor(calibratedRed: 0.1, green: 0.1, blue: 0.1, alpha: 1)
-        sceneView.isPlaying = true
-        
         let root = SCNNode(geometry: SCNPlane(width: 1920, height: 1080))
         scene.rootNode.addChildNode(root)
+        
+        sceneView.backgroundColor = NSColor(calibratedRed: 0.1, green: 0.1, blue: 0.1, alpha: 1)
+        sceneView.isPlaying = true
         sceneView.allowsCameraControl = true
         sceneView.preferredFramesPerSecond = 50 //23.98 NTSC (If scene seems to lag it is because of this)
         sceneView.scene = scene
         
-        // for later
         sceneView.snapshot()
+        // for later
         optimalPOV = sceneView.pointOfView?.position.z
         
         root.geometry?.firstMaterial?.diffuse.contents = NSColor.black

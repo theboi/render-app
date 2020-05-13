@@ -8,22 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		AA27BB4E2454394E002AEB02 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA27BB4D2454394E002AEB02 /* WindowController.swift */; };
-		AA31C36124499F5500B81973 /* NewProjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA31C36024499F5500B81973 /* NewProjectVC.swift */; };
 		AA3FCEB82449862F0001B005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCEB72449862F0001B005 /* AppDelegate.swift */; };
-		AA3FCEBA2449862F0001B005 /* RenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCEB92449862F0001B005 /* RenderVC.swift */; };
 		AA3FCEBC2449862F0001B005 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCEBB2449862F0001B005 /* Document.swift */; };
 		AA3FCEBE244986310001B005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3FCEBD244986310001B005 /* Assets.xcassets */; };
 		AA3FCEC1244986310001B005 /* Unused.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA3FCEBF244986310001B005 /* Unused.storyboard */; };
 		AA6208D0244A966F00694243 /* RenderScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = AA6208CF244A966F00694243 /* RenderScene.scn */; };
-		AA65AB89245D979300A1D5AC /* RenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65AB88245D979300A1D5AC /* RenderViewController.swift */; };
+		AA65AB89245D979300A1D5AC /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65AB88245D979300A1D5AC /* EditorViewController.swift */; };
 		AA6E5A21245D3B68005E358D /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E5A20245D3B68005E358D /* AppMenu.swift */; };
 		AA7FE92D2457CAAD0092CC1C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FE92C2457CAAD0092CC1C /* main.swift */; };
+		AA92A545246A99A200735C3E /* MixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA92A544246A99A200735C3E /* MixerView.swift */; };
 		AAA6AC6524626F2B009AB802 /* Alive Again.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */; };
+		AAA6AC672462AE48009AB802 /* TimelineToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA6AC662462AE48009AB802 /* TimelineToolbarView.swift */; };
 		AACEA3C3245E6ADB002080FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3C2245E6ADB002080FA /* Constants.swift */; };
 		AACEA3C5245EB53C002080FA /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3C4245EB53C002080FA /* TimelineView.swift */; };
 		AACEA3C9245FACE2002080FA /* SceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3C8245FACE2002080FA /* SceneView.swift */; };
 		AACEA3CD245FB210002080FA /* AppToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3CC245FB210002080FA /* AppToolbar.swift */; };
 		AAE646632451D52E007D21B6 /* DrawShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE646622451D52E007D21B6 /* DrawShapeNode.swift */; };
+		AAF8713D246BC8EC00007C37 /* InspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8713C246BC8EC00007C37 /* InspectorView.swift */; };
+		AAF87141246C000A00007C37 /* Batch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF87140246C000A00007C37 /* Batch.swift */; };
+		AAF87144246C007600007C37 /* MixerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF87143246C007600007C37 /* MixerSlider.swift */; };
 		BBA12093C874F0FA6AC3C116 /* Pods_Render.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28D68152F17ED051285022E /* Pods_Render.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,25 +34,28 @@
 		953CB53BC09B0ADF09BFA5F6 /* Pods-Render.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Render.debug.xcconfig"; path = "Target Support Files/Pods-Render/Pods-Render.debug.xcconfig"; sourceTree = "<group>"; };
 		A28D68152F17ED051285022E /* Pods_Render.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Render.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA27BB4D2454394E002AEB02 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
-		AA31C36024499F5500B81973 /* NewProjectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProjectVC.swift; sourceTree = "<group>"; };
 		AA3FCEB42449862F0001B005 /* Render.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Render.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3FCEB72449862F0001B005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA3FCEB92449862F0001B005 /* RenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderVC.swift; sourceTree = "<group>"; };
 		AA3FCEBB2449862F0001B005 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		AA3FCEBD244986310001B005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA3FCEC0244986310001B005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Unused.storyboard; sourceTree = "<group>"; };
 		AA3FCEC2244986310001B005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA3FCEC3244986310001B005 /* Render.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Render.entitlements; sourceTree = "<group>"; };
 		AA6208CF244A966F00694243 /* RenderScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = RenderScene.scn; sourceTree = "<group>"; };
-		AA65AB88245D979300A1D5AC /* RenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderViewController.swift; sourceTree = "<group>"; };
+		AA65AB88245D979300A1D5AC /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		AA6E5A20245D3B68005E358D /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
 		AA7FE92C2457CAAD0092CC1C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AA92A544246A99A200735C3E /* MixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerView.swift; sourceTree = "<group>"; };
 		AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Alive Again.mp3"; sourceTree = "<group>"; };
+		AAA6AC662462AE48009AB802 /* TimelineToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineToolbarView.swift; sourceTree = "<group>"; };
 		AACEA3C2245E6ADB002080FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AACEA3C4245EB53C002080FA /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
-		AACEA3C8245FACE2002080FA /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
+		AACEA3C8245FACE2002080FA /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneView.swift; path = SceneView/SceneView.swift; sourceTree = "<group>"; };
 		AACEA3CC245FB210002080FA /* AppToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToolbar.swift; sourceTree = "<group>"; };
 		AAE646622451D52E007D21B6 /* DrawShapeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapeNode.swift; sourceTree = "<group>"; };
+		AAF8713C246BC8EC00007C37 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
+		AAF87140246C000A00007C37 /* Batch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Batch.swift; sourceTree = "<group>"; };
+		AAF87143246C007600007C37 /* MixerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerSlider.swift; sourceTree = "<group>"; };
 		BE6D28D06DD0CF57C56243E1 /* Pods-Render.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Render.release.xcconfig"; path = "Target Support Files/Pods-Render/Pods-Render.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +121,6 @@
 		AA3FCEC9244987470001B005 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AA3FCEB92449862F0001B005 /* RenderVC.swift */,
-				AA31C36024499F5500B81973 /* NewProjectVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -124,8 +128,9 @@
 		AA3FCECA244987940001B005 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AAE646622451D52E007D21B6 /* DrawShapeNode.swift */,
 				AACEA3CE245FB219002080FA /* App */,
-				AACEA3C6245EB543002080FA /* Render */,
+				AACEA3C6245EB543002080FA /* EditorViewController */,
 				AA27BB4D2454394E002AEB02 /* WindowController.swift */,
 				AA3FCEBF244986310001B005 /* Unused.storyboard */,
 			);
@@ -135,7 +140,7 @@
 		AA3FCECB244987990001B005 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AAE646622451D52E007D21B6 /* DrawShapeNode.swift */,
+				AAF87140246C000A00007C37 /* Batch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -147,14 +152,17 @@
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		AACEA3C6245EB543002080FA /* Render */ = {
+		AACEA3C6245EB543002080FA /* EditorViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AA65AB88245D979300A1D5AC /* RenderViewController.swift */,
+				AAF87142246C004C00007C37 /* Mixer */,
+				AA65AB88245D979300A1D5AC /* EditorViewController.swift */,
 				AACEA3C4245EB53C002080FA /* TimelineView.swift */,
+				AAA6AC662462AE48009AB802 /* TimelineToolbarView.swift */,
 				AACEA3C8245FACE2002080FA /* SceneView.swift */,
+				AAF8713C246BC8EC00007C37 /* InspectorView.swift */,
 			);
-			path = Render;
+			path = EditorViewController;
 			sourceTree = "<group>";
 		};
 		AACEA3CE245FB219002080FA /* App */ = {
@@ -164,6 +172,15 @@
 				AACEA3CC245FB210002080FA /* AppToolbar.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		AAF87142246C004C00007C37 /* Mixer */ = {
+			isa = PBXGroup;
+			children = (
+				AA92A544246A99A200735C3E /* MixerView.swift */,
+				AAF87143246C007600007C37 /* MixerSlider.swift */,
+			);
+			path = Mixer;
 			sourceTree = "<group>";
 		};
 		B6C9A81157B1B621D878EA38 /* Frameworks */ = {
@@ -291,18 +308,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE646632451D52E007D21B6 /* DrawShapeNode.swift in Sources */,
+				AAF87141246C000A00007C37 /* Batch.swift in Sources */,
 				AACEA3C3245E6ADB002080FA /* Constants.swift in Sources */,
 				AA27BB4E2454394E002AEB02 /* WindowController.swift in Sources */,
-				AA3FCEBA2449862F0001B005 /* RenderVC.swift in Sources */,
+				AAF87144246C007600007C37 /* MixerSlider.swift in Sources */,
 				AA3FCEB82449862F0001B005 /* AppDelegate.swift in Sources */,
+				AAF8713D246BC8EC00007C37 /* InspectorView.swift in Sources */,
 				AACEA3C5245EB53C002080FA /* TimelineView.swift in Sources */,
 				AA3FCEBC2449862F0001B005 /* Document.swift in Sources */,
+				AAA6AC672462AE48009AB802 /* TimelineToolbarView.swift in Sources */,
 				AA7FE92D2457CAAD0092CC1C /* main.swift in Sources */,
 				AA6E5A21245D3B68005E358D /* AppMenu.swift in Sources */,
-				AA31C36124499F5500B81973 /* NewProjectVC.swift in Sources */,
-				AA65AB89245D979300A1D5AC /* RenderViewController.swift in Sources */,
+				AA65AB89245D979300A1D5AC /* EditorViewController.swift in Sources */,
 				AACEA3C9245FACE2002080FA /* SceneView.swift in Sources */,
 				AACEA3CD245FB210002080FA /* AppToolbar.swift in Sources */,
+				AA92A545246A99A200735C3E /* MixerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

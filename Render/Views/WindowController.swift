@@ -12,7 +12,6 @@ class WindowController: NSWindowController {
     
     @IBOutlet var recordSymbol: NSButtonCell!
     override func windowDidLoad() {
-        print("Hello")
         super.windowDidLoad()
         recordSymbol.attributedTitle = NSAttributedString(string: "􀀁", attributes: [NSAttributedString.Key.foregroundColor : NSColor.red])
         
