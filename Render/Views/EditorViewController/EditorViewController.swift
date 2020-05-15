@@ -30,7 +30,10 @@ class EditorViewController: NSViewController, NSSplitViewDelegate {
         rootSplitView.dividerStyle = .thin
         rootSplitView.snp.makeConstraints { (make) in make.edges.equalTo(view).inset(ConstraintInsets(top: 0, left: 0, bottom: 0, right: 0))}
         rootSplitViewLeft.snp.makeConstraints { (make) in make.width.lessThanOrEqualTo(300)}
-        mixerSplitView.snp.makeConstraints { (make) in make.width.lessThanOrEqualTo(300)}
+        mixerSplitView.snp.makeConstraints { (make) in
+            make.width.lessThanOrEqualTo(500)
+            make.width.greaterThanOrEqualTo(170)
+        }
         rootSplitView.subviews = [rootSplitViewLeft, centerSplitView, mixerSplitView]
 
         centerSplitView.subviews = [sceneView, timelineView]

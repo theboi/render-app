@@ -6,7 +6,6 @@
 //  Copyright © 2020 Ryan The. All rights reserved.
 //
 
-import Foundation
 import Cocoa
 
 struct K {
