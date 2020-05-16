@@ -27,8 +27,8 @@ class MixerView: NSView {
         tableView.headerView = nil
         tableView.focusRingType = .none
         tableView.selectionHighlightStyle = .sourceList
-        tableView.rowHeight = 30
-        tableView.intercellSpacing = NSSize(width: 0, height: 10)
+        tableView.rowHeight = 40
+        tableView.intercellSpacing = NSSize(width: 0, height: 0)
         
         let col = NSTableColumn()
         tableView.addTableColumn(col)

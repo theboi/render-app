@@ -53,7 +53,7 @@
 		AAA6AC662462AE48009AB802 /* TimelineToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineToolbarView.swift; sourceTree = "<group>"; };
 		AACEA3C2245E6ADB002080FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AACEA3C4245EB53C002080FA /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
-		AACEA3C8245FACE2002080FA /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneView.swift; path = SceneView/SceneView.swift; sourceTree = "<group>"; };
+		AACEA3C8245FACE2002080FA /* SceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneView.swift; sourceTree = "<group>"; };
 		AACEA3CC245FB210002080FA /* AppToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToolbar.swift; sourceTree = "<group>"; };
 		AAE646622451D52E007D21B6 /* DrawShapeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapeNode.swift; sourceTree = "<group>"; };
 		AAF8713C246BC8EC00007C37 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
@@ -169,9 +169,8 @@
 				AA65AB88245D979300A1D5AC /* EditorViewController.swift */,
 				AA992C83246D97B40032AE5E /* Inspector */,
 				AAF87142246C004C00007C37 /* Mixer */,
-				AACEA3C4245EB53C002080FA /* TimelineView.swift */,
-				AAA6AC662462AE48009AB802 /* TimelineToolbarView.swift */,
-				AACEA3C8245FACE2002080FA /* SceneView.swift */,
+				AAFD67DA246F8F3C00C9F09B /* Timeline */,
+				AAFD67DB246F8F5A00C9F09B /* Scene */,
 			);
 			path = EditorViewController;
 			sourceTree = "<group>";
@@ -192,6 +191,23 @@
 				AA992C81246D24F20032AE5E /* MixerSlider.swift */,
 			);
 			path = Mixer;
+			sourceTree = "<group>";
+		};
+		AAFD67DA246F8F3C00C9F09B /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				AACEA3C4245EB53C002080FA /* TimelineView.swift */,
+				AAA6AC662462AE48009AB802 /* TimelineToolbarView.swift */,
+			);
+			path = Timeline;
+			sourceTree = "<group>";
+		};
+		AAFD67DB246F8F5A00C9F09B /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				AACEA3C8245FACE2002080FA /* SceneView.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		B6C9A81157B1B621D878EA38 /* Frameworks */ = {

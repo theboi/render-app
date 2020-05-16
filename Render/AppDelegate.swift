@@ -13,6 +13,7 @@ class AppDelegate: NSApplication, NSApplicationDelegate {
     
     private var window: NSWindow?
     private var windowController: NSWindowController?
+    private lazy var toolbar = AppToolbar(identifier: .init(Character("D")))
     
     override init() {
         super.init()
@@ -44,10 +45,11 @@ class AppDelegate: NSApplication, NSApplicationDelegate {
 
         // Load Content View Controller for Window
 //        window?.windowController = WindowController()
-        window?.titleVisibility = .hidden
+//        window?.titleVisibility = .hidden
+        window?.title = "Hello"
         window?.titlebarAppearsTransparent = true
         window?.contentViewController = EditorViewController()
-        window?.toolbar = AppToolbar()
+        window?.toolbar = toolbar
         window?.makeKeyAndOrderFront(nil)
 //        windowController?.showWindow(nil)
     }
