@@ -17,7 +17,7 @@ class AppToolbar: NSToolbar, NSToolbarDelegate {
 //        delegate = self
 //        let flexibleSpace = NSToolbarItem(itemIdentifier: .flexibleSpace)
 //        insertItem(withItemIdentifier: .print, at: 0)
-        print(items)
+//        print(items)
         
     }
     

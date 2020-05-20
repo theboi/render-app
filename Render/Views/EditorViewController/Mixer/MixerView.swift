@@ -12,10 +12,18 @@ import SnapKit
 class MixerView: NSView {
     
     private lazy var tableView = NSTableView()
+    private lazy var toolbar = MixerToolbarView()
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         addSubview(tableView)
+        addSubview(toolbar)
+        
+        toolbar.snp.makeConstraints { (make) in
+            make.top.left.right.equalTo(self).offset(0)
+            make.height.equalTo(65)
+        }
+        
         tableView.snp.makeConstraints { (make) in
             make.height.equalTo(1000)
             make.left.equalTo(self).offset(5)
@@ -30,8 +38,7 @@ class MixerView: NSView {
         tableView.rowHeight = 40
         tableView.intercellSpacing = NSSize(width: 0, height: 0)
         
-        let col = NSTableColumn()
-        tableView.addTableColumn(col)
+        tableView.addTableColumn(NSTableColumn())
     }
     
     required init?(coder: NSCoder) {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA27BB4E2454394E002AEB02 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA27BB4D2454394E002AEB02 /* WindowController.swift */; };
+		AA3A5ACE24722BF100DA37CF /* MixerToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A5ACD24722BF100DA37CF /* MixerToolbarView.swift */; };
 		AA3FCEB82449862F0001B005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCEB72449862F0001B005 /* AppDelegate.swift */; };
 		AA3FCEBC2449862F0001B005 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCEBB2449862F0001B005 /* Document.swift */; };
 		AA3FCEBE244986310001B005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA3FCEBD244986310001B005 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 		AA6208D0244A966F00694243 /* RenderScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = AA6208CF244A966F00694243 /* RenderScene.scn */; };
 		AA65AB89245D979300A1D5AC /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA65AB88245D979300A1D5AC /* EditorViewController.swift */; };
 		AA6E5A21245D3B68005E358D /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6E5A20245D3B68005E358D /* AppMenu.swift */; };
+		AA7CBBF52470182800977247 /* Attribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7CBBF42470182800977247 /* Attribute.swift */; };
 		AA7FE92D2457CAAD0092CC1C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FE92C2457CAAD0092CC1C /* main.swift */; };
 		AA92A545246A99A200735C3E /* MixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA92A544246A99A200735C3E /* MixerView.swift */; };
 		AA992C82246D24F20032AE5E /* MixerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA992C81246D24F20032AE5E /* MixerSlider.swift */; };
@@ -27,7 +29,7 @@
 		AACEA3CD245FB210002080FA /* AppToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3CC245FB210002080FA /* AppToolbar.swift */; };
 		AAE646632451D52E007D21B6 /* DrawShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE646622451D52E007D21B6 /* DrawShapeNode.swift */; };
 		AAF8713D246BC8EC00007C37 /* InspectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF8713C246BC8EC00007C37 /* InspectorView.swift */; };
-		AAF87141246C000A00007C37 /* Beats.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF87140246C000A00007C37 /* Beats.swift */; };
+		AAF87141246C000A00007C37 /* Beat.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF87140246C000A00007C37 /* Beat.swift */; };
 		BBA12093C874F0FA6AC3C116 /* Pods_Render.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28D68152F17ED051285022E /* Pods_Render.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +37,7 @@
 		953CB53BC09B0ADF09BFA5F6 /* Pods-Render.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Render.debug.xcconfig"; path = "Target Support Files/Pods-Render/Pods-Render.debug.xcconfig"; sourceTree = "<group>"; };
 		A28D68152F17ED051285022E /* Pods_Render.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Render.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA27BB4D2454394E002AEB02 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		AA3A5ACD24722BF100DA37CF /* MixerToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerToolbarView.swift; sourceTree = "<group>"; };
 		AA3FCEB42449862F0001B005 /* Render.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Render.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3FCEB72449862F0001B005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA3FCEBB2449862F0001B005 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -45,6 +48,7 @@
 		AA6208CF244A966F00694243 /* RenderScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = RenderScene.scn; sourceTree = "<group>"; };
 		AA65AB88245D979300A1D5AC /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
 		AA6E5A20245D3B68005E358D /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
+		AA7CBBF42470182800977247 /* Attribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attribute.swift; sourceTree = "<group>"; };
 		AA7FE92C2457CAAD0092CC1C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		AA92A544246A99A200735C3E /* MixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerView.swift; sourceTree = "<group>"; };
 		AA992C81246D24F20032AE5E /* MixerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerSlider.swift; sourceTree = "<group>"; };
@@ -57,7 +61,7 @@
 		AACEA3CC245FB210002080FA /* AppToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppToolbar.swift; sourceTree = "<group>"; };
 		AAE646622451D52E007D21B6 /* DrawShapeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawShapeNode.swift; sourceTree = "<group>"; };
 		AAF8713C246BC8EC00007C37 /* InspectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorView.swift; sourceTree = "<group>"; };
-		AAF87140246C000A00007C37 /* Beats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beats.swift; sourceTree = "<group>"; };
+		AAF87140246C000A00007C37 /* Beat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beat.swift; sourceTree = "<group>"; };
 		BE6D28D06DD0CF57C56243E1 /* Pods-Render.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Render.release.xcconfig"; path = "Target Support Files/Pods-Render/Pods-Render.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +110,6 @@
 				AA6208CE244A965100694243 /* Scene */,
 				AA3FCECB244987990001B005 /* Models */,
 				AA3FCECA244987940001B005 /* Views */,
-				AA3FCEC9244987470001B005 /* Controllers */,
 				AA3FCEB72449862F0001B005 /* AppDelegate.swift */,
 				AA7FE92C2457CAAD0092CC1C /* main.swift */,
 				AA3FCEBB2449862F0001B005 /* Document.swift */,
@@ -118,13 +121,6 @@
 				AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */,
 			);
 			path = Render;
-			sourceTree = "<group>";
-		};
-		AA3FCEC9244987470001B005 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AA3FCECA244987940001B005 /* Views */ = {
@@ -142,7 +138,8 @@
 		AA3FCECB244987990001B005 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AAF87140246C000A00007C37 /* Beats.swift */,
+				AAF87140246C000A00007C37 /* Beat.swift */,
+				AA7CBBF42470182800977247 /* Attribute.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,6 +186,7 @@
 			children = (
 				AA92A544246A99A200735C3E /* MixerView.swift */,
 				AA992C81246D24F20032AE5E /* MixerSlider.swift */,
+				AA3A5ACD24722BF100DA37CF /* MixerToolbarView.swift */,
 			);
 			path = Mixer;
 			sourceTree = "<group>";
@@ -335,8 +333,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE646632451D52E007D21B6 /* DrawShapeNode.swift in Sources */,
-				AAF87141246C000A00007C37 /* Beats.swift in Sources */,
+				AAF87141246C000A00007C37 /* Beat.swift in Sources */,
 				AACEA3C3245E6ADB002080FA /* Constants.swift in Sources */,
+				AA3A5ACE24722BF100DA37CF /* MixerToolbarView.swift in Sources */,
 				AA27BB4E2454394E002AEB02 /* WindowController.swift in Sources */,
 				AA992C82246D24F20032AE5E /* MixerSlider.swift in Sources */,
 				AA3FCEB82449862F0001B005 /* AppDelegate.swift in Sources */,
@@ -346,6 +345,7 @@
 				AA3FCEBC2449862F0001B005 /* Document.swift in Sources */,
 				AAA6AC672462AE48009AB802 /* TimelineToolbarView.swift in Sources */,
 				AA7FE92D2457CAAD0092CC1C /* main.swift in Sources */,
+				AA7CBBF52470182800977247 /* Attribute.swift in Sources */,
 				AA6E5A21245D3B68005E358D /* AppMenu.swift in Sources */,
 				AA65AB89245D979300A1D5AC /* EditorViewController.swift in Sources */,
 				AACEA3C9245FACE2002080FA /* SceneView.swift in Sources */,

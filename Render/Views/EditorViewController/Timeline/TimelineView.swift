@@ -28,7 +28,6 @@ class TimelineView: NSView {
             make.height.equalTo(30)
         }
         
-        
         NSRulerView.registerUnit(withName: NSRulerView.UnitName(rawValue: "Seconds"), abbreviation: "s", unitToPointsConversionFactor: 100, stepUpCycle: [2.0], stepDownCycle: [0.5])
         timelineRuler.measurementUnits = .init("Seconds")
         

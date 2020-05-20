@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Beats {
+class Beat {
     enum BeatType {
         case slider
         case button

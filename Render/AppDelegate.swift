@@ -45,8 +45,8 @@ class AppDelegate: NSApplication, NSApplicationDelegate {
 
         // Load Content View Controller for Window
 //        window?.windowController = WindowController()
-//        window?.titleVisibility = .hidden
-        window?.title = "Hello"
+        window?.titleVisibility = .hidden
+//        window?.title = "Hello"
         window?.titlebarAppearsTransparent = true
         window?.contentViewController = EditorViewController()
         window?.toolbar = toolbar
