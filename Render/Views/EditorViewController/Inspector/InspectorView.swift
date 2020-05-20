@@ -12,8 +12,8 @@ class InspectorView: NSView, NSTableViewDelegate, NSTableViewDataSource {
     
     private let attributes = [
         Attribute(named: "Type", of: .dropdown(options: ["Slider", "Button"])),
-        Attribute(named: "Object", of: .dropdown(options: ["Something", "Something1"])),
-        Attribute(named: "Object", of: .field(placeholder: "Hello")),
+        Attribute(named: "Beat", of: .dropdown(options: ["None"])),
+        Attribute(named: "Prop", of: .dropdown(options: ["Opacity", "Color", "Scale"])),
     ]
     private lazy var table = NSTableView()
     private lazy var title = NSTextField()

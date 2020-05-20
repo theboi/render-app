@@ -9,10 +9,14 @@
 import Cocoa
 import SnapKit
 
+protocol MixerViewDelegate: MixerView {
+    func didSelectSlider()
+}
+
 class MixerView: NSView {
-    
     private lazy var tableView = NSTableView()
     private lazy var toolbar = MixerToolbarView()
+    weak var delegate: MixerViewDelegate?
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
@@ -39,6 +43,7 @@ class MixerView: NSView {
         tableView.intercellSpacing = NSSize(width: 0, height: 0)
         
         tableView.addTableColumn(NSTableColumn())
+        
     }
     
     required init?(coder: NSCoder) {
@@ -49,9 +54,8 @@ class MixerView: NSView {
 
 extension MixerView: NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
-        return 8
+        return 1
     }
-    
 }
 
 extension MixerView: NSTableViewDelegate {
@@ -75,7 +79,9 @@ extension MixerView: NSTableViewDelegate {
                 otherView?.layer?.borderColor = NSColor.clear.cgColor
             }
         }
+        
+        delegate?.didSelectSlider()
+        
         return true
     }
-    
 }

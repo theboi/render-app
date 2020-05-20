@@ -107,7 +107,7 @@
 		AA3FCEB62449862F0001B005 /* Render */ = {
 			isa = PBXGroup;
 			children = (
-				AA6208CE244A965100694243 /* Scene */,
+				AA8EA3E824756BB70085AB53 /* New Group */,
 				AA3FCECB244987990001B005 /* Models */,
 				AA3FCECA244987940001B005 /* Views */,
 				AA3FCEB72449862F0001B005 /* AppDelegate.swift */,
@@ -144,11 +144,11 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AA6208CE244A965100694243 /* Scene */ = {
+		AA8EA3E824756BB70085AB53 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Scene;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		AA992C83246D97B40032AE5E /* Inspector */ = {
