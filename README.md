@@ -7,8 +7,8 @@ _Currently Unavailable_
 
 ### Terminology
 - Beat:
-  - A Beat refers to an instance of a pattern of signals that are used to animate Objects in the Scene.
-  - Beats can be put together in the Timeline to form a more complex new Beat.
+  - A Beat refers to an instance of a pattern that are used to animate Objects in the Scene.
+  - Beats can be put together in the Timeline to form more complex new Beats.
 - Object:
   - An Object refers to an item in the Scene that can be animated using Beats.
 - Mixer:
@@ -19,8 +19,8 @@ _Currently Unavailable_
   - The Scene view can be found on the top area of the editor.
   - Output video can be seen here.
 
-### Editor
-_Currently Unavailable_
+### Layout
+_Image Currently Unavailable_
 
 The editor is split into 4 main sections
 - Left: ??
