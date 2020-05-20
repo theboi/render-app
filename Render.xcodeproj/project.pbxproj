@@ -21,7 +21,6 @@
 		AA92A545246A99A200735C3E /* MixerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA92A544246A99A200735C3E /* MixerView.swift */; };
 		AA992C82246D24F20032AE5E /* MixerSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA992C81246D24F20032AE5E /* MixerSlider.swift */; };
 		AA992C85246D97F10032AE5E /* InspectorProp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA992C84246D97F10032AE5E /* InspectorProp.swift */; };
-		AAA6AC6524626F2B009AB802 /* Alive Again.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */; };
 		AAA6AC672462AE48009AB802 /* TimelineToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA6AC662462AE48009AB802 /* TimelineToolbarView.swift */; };
 		AACEA3C3245E6ADB002080FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3C2245E6ADB002080FA /* Constants.swift */; };
 		AACEA3C5245EB53C002080FA /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AACEA3C4245EB53C002080FA /* TimelineView.swift */; };
@@ -53,7 +52,6 @@
 		AA92A544246A99A200735C3E /* MixerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerView.swift; sourceTree = "<group>"; };
 		AA992C81246D24F20032AE5E /* MixerSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerSlider.swift; sourceTree = "<group>"; };
 		AA992C84246D97F10032AE5E /* InspectorProp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InspectorProp.swift; sourceTree = "<group>"; };
-		AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Alive Again.mp3"; sourceTree = "<group>"; };
 		AAA6AC662462AE48009AB802 /* TimelineToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineToolbarView.swift; sourceTree = "<group>"; };
 		AACEA3C2245E6ADB002080FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AACEA3C4245EB53C002080FA /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 				AA3FCEC3244986310001B005 /* Render.entitlements */,
 				AA6208CF244A966F00694243 /* RenderScene.scn */,
 				AACEA3C2245E6ADB002080FA /* Constants.swift */,
-				AAA6AC6424626F2B009AB802 /* Alive Again.mp3 */,
 			);
 			path = Render;
 			sourceTree = "<group>";
@@ -278,7 +275,6 @@
 			files = (
 				AA3FCEBE244986310001B005 /* Assets.xcassets in Resources */,
 				AA3FCEC1244986310001B005 /* Unused.storyboard in Resources */,
-				AAA6AC6524626F2B009AB802 /* Alive Again.mp3 in Resources */,
 				AA6208D0244A966F00694243 /* RenderScene.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
