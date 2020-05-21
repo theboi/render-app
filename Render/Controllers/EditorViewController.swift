@@ -15,16 +15,16 @@ class EditorViewController: NSViewController, NSSplitViewDelegate, MixerViewDele
         mixerTopView.setSliderValues(index: index)
     }
     
-    private lazy var rootSplitView = NSSplitView()
-    private lazy var rootSplitViewLeft = NSView()
+    lazy var rootSplitView = NSSplitView()
+    lazy var rootSplitViewLeft = NSView()
     
-    private lazy var mixerSplitView = NSSplitView()
-    private lazy var mixerBottomView = MixerView()
-    private lazy var mixerTopView = InspectorView()
+    lazy var mixerSplitView = NSSplitView()
+    lazy var mixerBottomView = MixerView()
+    lazy var mixerTopView = InspectorView()
     
-    private lazy var centerSplitView = NSSplitView()
-    private lazy var sceneView = SceneView()
-    private lazy var timelineView = TimelineView()
+    lazy var centerSplitView = NSSplitView()
+    lazy var sceneView = SceneView()
+    lazy var timelineView = TimelineView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +41,12 @@ class EditorViewController: NSViewController, NSSplitViewDelegate, MixerViewDele
             make.width.greaterThanOrEqualTo(170)
         }
         rootSplitView.subviews = [rootSplitViewLeft, centerSplitView, mixerSplitView]
-
+        
         centerSplitView.subviews = [sceneView, timelineView]
         centerSplitView.dividerStyle = .thin
         centerSplitView.delegate = self
         timelineView.snp.makeConstraints { (make) in make.height.lessThanOrEqualTo(500)}
-
+        
         mixerSplitView.subviews = [mixerTopView, mixerBottomView]
         mixerSplitView.dividerStyle = .thin
         mixerBottomView.snp.makeConstraints { (make) in make.height.lessThanOrEqualTo(500)}
@@ -60,9 +60,9 @@ class EditorViewController: NSViewController, NSSplitViewDelegate, MixerViewDele
     }
     
     override func loadView() {
-        self.view = NSView(frame: K.screenRect)
+        self.view = NSView(frame: NSRect(origin: CGPoint(x: 0, y: 0), size: K.screenSize))
     }
-
+    
     func splitViewDidResizeSubviews(_ notification: Notification) {
         mixerSplitView.setPosition(mixerSplitView.frame.height - timelineView.frame.height - 1, ofDividerAt: 0)
     }

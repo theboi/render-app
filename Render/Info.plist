@@ -12,7 +12,7 @@
 				<string>rend</string>
 			</array>
 			<key>CFBundleTypeIconFile</key>
-			<string></string>
+			<string>Document Icon</string>
 			<key>CFBundleTypeName</key>
 			<string>Render Document</string>
 			<key>CFBundleTypeOSTypes</key>
@@ -58,6 +58,8 @@
 		<dict>
 			<key>UTTypeDescription</key>
 			<string>Render Document</string>
+			<key>UTTypeIconFile</key>
+			<string>Document Icon</string>
 			<key>UTTypeIdentifier</key>
 			<string>com.ryanthe.render</string>
 			<key>UTTypeTagSpecification</key>

@@ -12,7 +12,6 @@ import Cocoa
 class AppDelegate: NSApplication, NSApplicationDelegate {
     
     private var window: NSWindow?
-    private var windowController: NSWindowController?
     private lazy var toolbar = AppToolbar(identifier: .init(Character("D")))
     
     override init() {
@@ -30,28 +29,32 @@ class AppDelegate: NSApplication, NSApplicationDelegate {
                                                      .applicationVersion: "0.1"])
     }
     
+    func applicationWillFinishLaunching(_ notification: Notification) {
+        // first instance becomes the shared document controller
+        _ = DocumentController()
+    }
     func applicationDidFinishLaunching(_ notification: Notification) {
         // Create Window
-        let windowSize = NSSize(width: 480, height: 480)
-        let screenSize = NSScreen.main?.frame.size ?? .zero
-        let rect = NSMakeRect(screenSize.width/2 - windowSize.width/2,
-                              screenSize.height/2 - windowSize.height/2,
-                              windowSize.width,
-                              windowSize.height)
-        window = NSWindow(contentRect: rect,
-                          styleMask: [.miniaturizable, .closable, .resizable, .titled],
-                          backing: .buffered,
-                          defer: false)
-
-        // Load Content View Controller for Window
-//        window?.windowController = WindowController()
-        window?.titleVisibility = .hidden
-//        window?.title = "Hello"
-        window?.titlebarAppearsTransparent = true
-        window?.contentViewController = EditorViewController()
-        window?.toolbar = toolbar
-        window?.makeKeyAndOrderFront(nil)
-//        windowController?.showWindow(nil)
+//        let windowSize = NSSize(width: 480, height: 480)
+//        let screenSize = NSScreen.main?.frame.size ?? .zero
+//        let rect = NSMakeRect(screenSize.width/2 - windowSize.width/2,
+//                              screenSize.height/2 - windowSize.height/2,
+//                              windowSize.width,
+//                              windowSize.height)
+//        window = NSWindow(contentRect: rect,
+//                          styleMask: [.miniaturizable, .closable, .resizable, .titled],
+//                          backing: .buffered,
+//                          defer: false)
+//
+//        // Load Content View Controller for Window
+////        window?.windowController = WindowController()
+////        window?.titleVisibility = .hidden
+////        window?.title = "Hello"
+//        window?.titlebarAppearsTransparent = true
+//        window?.contentViewController = EditorViewController()
+//        window?.toolbar = toolbar
+//        window?.makeKeyAndOrderFront(nil)
+////        windowController?.showWindow(nil)
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {

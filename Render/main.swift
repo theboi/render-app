@@ -16,8 +16,8 @@ import Cocoa
 //_ = NSApplicationMain(CommandLine.argc, CommandLine.unsafeArgv)
 
 autoreleasepool {
-    let App = AppDelegate.shared
-    App.setActivationPolicy(.regular)
-    App.applicationIconImage = NSImage(named: "AppIcon")
-    App.run()
+    let app = AppDelegate.shared
+    app.setActivationPolicy(.regular)
+    app.applicationIconImage = NSImage(named: "AppIcon")
+    app.run()
 }
