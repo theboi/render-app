@@ -11,7 +11,8 @@ import Cocoa
 class InspectorProp: NSStackView {
 
     private lazy var label = NSTextField()
-    private var inputObject = NSView()
+    private lazy var inputObject = NSView()
+    
     init(frame frameRect: NSRect, attribute: Attribute) {
         super.init(frame: frameRect)
         

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA27BB4E2454394E002AEB02 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA27BB4D2454394E002AEB02 /* WindowController.swift */; };
+		AA0DF57E24763FB90062DC97 /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0DF57D24763FB90062DC97 /* Content.swift */; };
 		AA3A5ACE24722BF100DA37CF /* MixerToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3A5ACD24722BF100DA37CF /* MixerToolbarView.swift */; };
 		AA3FCEB82449862F0001B005 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCEB72449862F0001B005 /* AppDelegate.swift */; };
 		AA3FCEBC2449862F0001B005 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3FCEBB2449862F0001B005 /* Document.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		953CB53BC09B0ADF09BFA5F6 /* Pods-Render.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Render.debug.xcconfig"; path = "Target Support Files/Pods-Render/Pods-Render.debug.xcconfig"; sourceTree = "<group>"; };
 		A28D68152F17ED051285022E /* Pods_Render.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Render.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA27BB4D2454394E002AEB02 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		AA0DF57D24763FB90062DC97 /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		AA3A5ACD24722BF100DA37CF /* MixerToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerToolbarView.swift; sourceTree = "<group>"; };
 		AA3FCEB42449862F0001B005 /* Render.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Render.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA3FCEB72449862F0001B005 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,17 +105,19 @@
 		AA3FCEB62449862F0001B005 /* Render */ = {
 			isa = PBXGroup;
 			children = (
-				AA8EA3E824756BB70085AB53 /* New Group */,
 				AA3FCECB244987990001B005 /* Models */,
 				AA3FCECA244987940001B005 /* Views */,
+				AA8EA3E824756BB70085AB53 /* Controllers */,
 				AA3FCEB72449862F0001B005 /* AppDelegate.swift */,
 				AA7FE92C2457CAAD0092CC1C /* main.swift */,
-				AA3FCEBB2449862F0001B005 /* Document.swift */,
 				AA3FCEBD244986310001B005 /* Assets.xcassets */,
 				AA3FCEC2244986310001B005 /* Info.plist */,
 				AA3FCEC3244986310001B005 /* Render.entitlements */,
 				AA6208CF244A966F00694243 /* RenderScene.scn */,
+				AA3FCEBF244986310001B005 /* Unused.storyboard */,
 				AACEA3C2245E6ADB002080FA /* Constants.swift */,
+				AA3FCEBB2449862F0001B005 /* Document.swift */,
+				AA0DF57D24763FB90062DC97 /* Content.swift */,
 			);
 			path = Render;
 			sourceTree = "<group>";
@@ -123,11 +125,8 @@
 		AA3FCECA244987940001B005 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AAE646622451D52E007D21B6 /* DrawShapeNode.swift */,
 				AACEA3CE245FB219002080FA /* App */,
-				AACEA3C6245EB543002080FA /* EditorViewController */,
-				AA27BB4D2454394E002AEB02 /* WindowController.swift */,
-				AA3FCEBF244986310001B005 /* Unused.storyboard */,
+				AACEA3C6245EB543002080FA /* EditorView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -141,11 +140,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		AA8EA3E824756BB70085AB53 /* New Group */ = {
+		AA8EA3E824756BB70085AB53 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AA65AB88245D979300A1D5AC /* EditorViewController.swift */,
 			);
-			path = "New Group";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		AA992C83246D97B40032AE5E /* Inspector */ = {
@@ -157,16 +157,15 @@
 			path = Inspector;
 			sourceTree = "<group>";
 		};
-		AACEA3C6245EB543002080FA /* EditorViewController */ = {
+		AACEA3C6245EB543002080FA /* EditorView */ = {
 			isa = PBXGroup;
 			children = (
-				AA65AB88245D979300A1D5AC /* EditorViewController.swift */,
 				AA992C83246D97B40032AE5E /* Inspector */,
 				AAF87142246C004C00007C37 /* Mixer */,
 				AAFD67DA246F8F3C00C9F09B /* Timeline */,
 				AAFD67DB246F8F5A00C9F09B /* Scene */,
 			);
-			path = EditorViewController;
+			path = EditorView;
 			sourceTree = "<group>";
 		};
 		AACEA3CE245FB219002080FA /* App */ = {
@@ -200,6 +199,7 @@
 		AAFD67DB246F8F5A00C9F09B /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				AAE646622451D52E007D21B6 /* DrawShapeNode.swift */,
 				AACEA3C8245FACE2002080FA /* SceneView.swift */,
 			);
 			path = Scene;
@@ -332,7 +332,6 @@
 				AAF87141246C000A00007C37 /* Beat.swift in Sources */,
 				AACEA3C3245E6ADB002080FA /* Constants.swift in Sources */,
 				AA3A5ACE24722BF100DA37CF /* MixerToolbarView.swift in Sources */,
-				AA27BB4E2454394E002AEB02 /* WindowController.swift in Sources */,
 				AA992C82246D24F20032AE5E /* MixerSlider.swift in Sources */,
 				AA3FCEB82449862F0001B005 /* AppDelegate.swift in Sources */,
 				AAF8713D246BC8EC00007C37 /* InspectorView.swift in Sources */,
@@ -343,6 +342,7 @@
 				AA7FE92D2457CAAD0092CC1C /* main.swift in Sources */,
 				AA7CBBF52470182800977247 /* Attribute.swift in Sources */,
 				AA6E5A21245D3B68005E358D /* AppMenu.swift in Sources */,
+				AA0DF57E24763FB90062DC97 /* Content.swift in Sources */,
 				AA65AB89245D979300A1D5AC /* EditorViewController.swift in Sources */,
 				AACEA3C9245FACE2002080FA /* SceneView.swift in Sources */,
 				AACEA3CD245FB210002080FA /* AppToolbar.swift in Sources */,
@@ -492,7 +492,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ryanthe.Render;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanthe.render;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -513,7 +513,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ryanthe.Render;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryanthe.render;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

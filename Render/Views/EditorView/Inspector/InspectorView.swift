@@ -10,16 +10,18 @@ import Cocoa
 
 class InspectorView: NSView, NSTableViewDelegate, NSTableViewDataSource {
     
-    private let attributes = [
-        Attribute(named: "Type", of: .dropdown(options: ["Slider", "Button"])),
-        Attribute(named: "Beat", of: .dropdown(options: ["None"])),
-        Attribute(named: "Prop", of: .dropdown(options: ["Opacity", "Color", "Scale"])),
+    private var attributes = [
+        Attribute(named: "Type", of: .dropdown(options: ["Slider", "Button"]), saved: ""),
+        Attribute(named: "Beat", of: .dropdown(options: ["None"]), saved: ""),
+        Attribute(named: "Prop", of: .dropdown(options: ["Opacity", "Color", "Scale"]), saved: ""),
     ]
+    
     private lazy var table = NSTableView()
     private lazy var title = NSTextField()
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
+            
         addSubview(table)
         addSubview(title)
         
@@ -59,5 +61,12 @@ class InspectorView: NSView, NSTableViewDelegate, NSTableViewDataSource {
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         let cell = InspectorProp(frame: NSRect(), attribute: attributes[row])
         return cell
+    }
+    
+    func setSliderValues(index: Int) {
+        for i in attributes {
+            
+        }
+        table.reloadData()
     }
 }

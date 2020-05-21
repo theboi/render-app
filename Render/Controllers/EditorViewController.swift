@@ -9,7 +9,11 @@
 import Cocoa
 import SnapKit
 
-class EditorViewController: NSViewController, NSSplitViewDelegate {
+class EditorViewController: NSViewController, NSSplitViewDelegate, MixerViewDelegate {
+    
+    func didSelectSlider(index: Int) {
+        mixerTopView.setSliderValues(index: index)
+    }
     
     private lazy var rootSplitView = NSSplitView()
     private lazy var rootSplitViewLeft = NSView()
@@ -26,9 +30,11 @@ class EditorViewController: NSViewController, NSSplitViewDelegate {
         super.viewDidLoad()
         view.subviews = [rootSplitView]
         
+        mixerBottomView.delegate = self
+        
         rootSplitView.isVertical = true
         rootSplitView.dividerStyle = .thin
-        rootSplitView.snp.makeConstraints { (make) in make.edges.equalTo(view).inset(ConstraintInsets(top: 0, left: 0, bottom: 0, right: 0))}
+        rootSplitView.snp.makeConstraints { (make) in make.edges.equalTo(view).offset(0)}
         rootSplitViewLeft.snp.makeConstraints { (make) in make.width.lessThanOrEqualTo(300)}
         mixerSplitView.snp.makeConstraints { (make) in
             make.width.lessThanOrEqualTo(500)
@@ -44,7 +50,6 @@ class EditorViewController: NSViewController, NSSplitViewDelegate {
         mixerSplitView.subviews = [mixerTopView, mixerBottomView]
         mixerSplitView.dividerStyle = .thin
         mixerBottomView.snp.makeConstraints { (make) in make.height.lessThanOrEqualTo(500)}
-        
     }
     
     override func viewDidAppear() {

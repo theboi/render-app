@@ -9,8 +9,8 @@
 import Cocoa
 import SnapKit
 
-protocol MixerViewDelegate: MixerView {
-    func didSelectSlider()
+protocol MixerViewDelegate: class {
+    func didSelectSlider(index: Int)
 }
 
 class MixerView: NSView {
@@ -80,7 +80,7 @@ extension MixerView: NSTableViewDelegate {
             }
         }
         
-        delegate?.didSelectSlider()
+        delegate?.didSelectSlider(index: row)
         
         return true
     }

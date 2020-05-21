@@ -23,8 +23,9 @@ class Document: NSDocument {
         // Returns the Storyboard that contains your Document window.
 //        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
 //        let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("Document Window Controller")) as! NSWindowController
-        let windowController = WindowController()
-        self.addWindowController(windowController)
+        
+//        let windowController = WindowController()
+//        self.addWindowController(windowController)
     }
 
     override func data(ofType typeName: String) throws -> Data {

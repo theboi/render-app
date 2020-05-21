@@ -14,9 +14,11 @@ class Attribute {
     
     let name: String
     let type: AttributeType
+    let saved: String
     
-    init(named: String, of type: AttributeType) {
+    init(named: String, of type: AttributeType, saved: String) {
         self.name = named
         self.type = type
+        self.saved = saved
     }
 }
